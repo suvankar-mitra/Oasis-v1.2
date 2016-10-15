@@ -35,7 +35,9 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.GestureDetector;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
@@ -106,6 +108,16 @@ public class MainActivity extends AppCompatActivity {
 
     //headset receiver
     private HeadsetIntentReceiver headsetIntentReceiver;
+
+    //notification config
+    private static NotificationManager manager;
+    static Notification notification;
+    static Notification.Builder builder;
+    private static final int NOTOFICATION_ID = 4567;
+
+    //these are intent actions to broadcast
+    public static String NEXT = "next";
+    public static String PLAY = "play";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -211,7 +223,7 @@ public class MainActivity extends AppCompatActivity {
                 musicSrv.playPrevSong(MusicLibraryController.previous());
                 _isPlaying = true;
                 _play.setImageResource(R.drawable.ic_pause_black_24dp);
-                //showNotification(musicSrv.nowPlaying);
+                showNotification(musicSrv.nowPlaying);
             }
         });
 
@@ -260,6 +272,78 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        _albumArt.setOnTouchListener(new View.OnTouchListener() {
+            private final GestureDetector gestureDetector = new GestureDetector(getBaseContext(), new GestureListener());
+
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                return gestureDetector.onTouchEvent(motionEvent);
+            }
+            final class GestureListener extends GestureDetector.SimpleOnGestureListener {
+
+                private static final int SWIPE_THRESHOLD = 100;
+                private static final int SWIPE_VELOCITY_THRESHOLD = 100;
+
+                @Override
+                public boolean onDown(MotionEvent e) {
+                    return true;
+                }
+
+                @Override
+                public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
+                    boolean result = false;
+                    try {
+                        float diffY = e2.getY() - e1.getY();
+                        float diffX = e2.getX() - e1.getX();
+                        if (Math.abs(diffX) > Math.abs(diffY)) {
+                            if (Math.abs(diffX) > SWIPE_THRESHOLD && Math.abs(velocityX) > SWIPE_VELOCITY_THRESHOLD) {
+                                if (diffX > 0) {
+                                    onSwipeRight();
+                                } else {
+                                    onSwipeLeft();
+                                }
+                            }
+                            result = true;
+                        }
+                        else if (Math.abs(diffY) > SWIPE_THRESHOLD && Math.abs(velocityY) > SWIPE_VELOCITY_THRESHOLD) {
+                            if (diffY > 0) {
+                                onSwipeBottom();
+                            } else {
+                                onSwipeTop();
+                            }
+                        }
+                        result = true;
+
+                    } catch (Exception exception) {
+                        exception.printStackTrace();
+                    }
+                    return result;
+                }
+            }
+
+            public void onSwipeRight() {
+                Log.d("FLING","fling right");
+                musicSrv.playPrevSong(MusicLibraryController.previous());
+                _isPlaying = true;
+                _play.setImageResource(R.drawable.ic_pause_black_24dp);
+                showNotification(musicSrv.nowPlaying);
+            }
+
+            public void onSwipeLeft() {
+                Log.d("FLING","fling left");
+                musicSrv.playPrevSong(MusicLibraryController.next());
+                _isPlaying = true;
+                _play.setImageResource(R.drawable.ic_pause_black_24dp);
+                showNotification(musicSrv.nowPlaying);
+            }
+
+            public void onSwipeTop() {
+            }
+
+            public void onSwipeBottom() {
+            }
+        });
+
     }
 
     public static MediaPlayerService getMusicSrv() {
@@ -269,16 +353,6 @@ public class MainActivity extends AppCompatActivity {
     public static boolean is_isPlaying() {
         return _isPlaying;
     }
-
-    //notification config
-    private static NotificationManager manager;
-    static Notification notification;
-    static Notification.Builder builder;
-    private static final int NOTOFICATION_ID = 4567;
-
-    //these are intent actions to broadcast
-    public static String NEXT = "next";
-    public static String PLAY = "play";
 
     /**
      * @param nowPlaying

@@ -108,11 +108,11 @@ public class MusicLibraryController {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-            if (isPrevCalled) {
+            /*if (isPrevCalled) {
                 currPos++;
                 isPrevCalled = false;
-            }
-            if (currPos >= length) {
+            }*/
+            if (currPos >= length-1) {
                 currPos = 0;
             }
             String filepath = musicLibrary.get(++currPos);
