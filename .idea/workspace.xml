@@ -30,8 +30,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f4dc2926-af11-496b-b0cd-92727eeaef3b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/song_list_item.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/net/net16/suvankar/oasis_v12/SongListFragment.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" />
@@ -40,12 +38,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/net/net16/suvankar/oasis_v12/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/net/net16/suvankar/oasis_v12/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/net/net16/suvankar/oasis_v12/utils/MusicLibraryController.java" afterPath="$PROJECT_DIR$/app/src/main/java/net/net16/suvankar/oasis_v12/utils/MusicLibraryController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_song_list.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_song_list.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
     </list>
     <ignored path="Oasis-v1.2.iws" />
@@ -118,28 +112,27 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/net/net16/suvankar/oasis_v12/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.36021507">
-              <caret line="963" column="0" selection-start-line="963" selection-start-column="0" selection-end-line="963" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.6362007">
+              <caret line="484" column="12" selection-start-line="484" selection-start-column="12" selection-end-line="484" selection-end-column="12" />
               <folding>
                 <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#initializeVariables#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#addOnclickListeners#0;class#MainActivity#0" expanded="false" />
-                <element signature="e#10151#10152#0" expanded="true" />
-                <element signature="e#10182#10183#0" expanded="true" />
-                <element signature="e#10226#10227#0" expanded="true" />
-                <element signature="e#10259#10260#0" expanded="true" />
                 <element signature="method#showNotification#0;class#MainActivity#0" expanded="false" />
                 <element signature="class#MusicBroadcastReceiver#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#getArtistName#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#getMediaTitle#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#getAlbumArt#0;class#MainActivity#0" expanded="false" />
-                <element signature="class#16132:16830" expanded="false" />
+                <element signature="class#17347:18045" expanded="false" />
+                <element signature="e#17996#17997#0" expanded="true" />
+                <element signature="e#18038#18039#0" expanded="true" />
                 <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#finish#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#getPermissionFromUser#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#showExplanation#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
+                <element signature="class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#onCreate#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#initMusicPlayer#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#onProgressChanged#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
@@ -147,7 +140,7 @@
                 <element signature="method#showNotification#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#onAudioFocusChange#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
                 <element signature="class#MusicBinder#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
-                <element signature="e#27592#27601#0" expanded="false" />
+                <element signature="e#29270#29279#0" expanded="false" />
                 <element signature="method#onUnbind#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#onDestroy#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#loadAlbumArt#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
@@ -157,18 +150,17 @@
                 <element signature="docComment;method#playSong#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#playSong#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#playSong#1;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
-                <element signature="method#playSong#2;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#pauseSong#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#playNextSong#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#playPrevSong#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#onCompletion#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#onPrepared#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
-                <element signature="e#35576#36427#0" expanded="true" />
-                <element signature="e#36426#36427#0" expanded="true" />
+                <element signature="e#37272#38123#0" expanded="true" />
+                <element signature="e#38122#38123#0" expanded="true" />
                 <element signature="method#showNotification#0;class#SongListFragment#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#initializeTabs#0;class#SongListFragment#0;class#MainActivity#0" expanded="false" />
-                <element signature="e#39136#39883#0" expanded="true" />
-                <element signature="e#39882#39883#0" expanded="true" />
+                <element signature="e#40832#41579#0" expanded="true" />
+                <element signature="e#41578#41579#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1967,7 +1959,7 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/sdk" />
-    <property name="device.picker.selection" value="ZX1B335Q7D" />
+    <property name="device.picker.selection" value="FAAZCY281808" />
     <property name="NetworkMonitor.minimized" value="true" />
     <property name="GpuMonitor.minimized" value="true" />
     <property name="UI_DESIGNER_EDITOR_MODE.CaptureAnalysis.SHOW" value="false" />
@@ -2362,7 +2354,7 @@
             <element signature="method#getArtistName#0;class#MainActivity#0" expanded="false" />
             <element signature="method#getMediaTitle#0;class#MainActivity#0" expanded="false" />
             <element signature="method#getAlbumArt#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#16132:16830" expanded="false" />
+            <element signature="class#17347:18045" expanded="false" />
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
             <element signature="method#finish#0;class#MainActivity#0" expanded="false" />
@@ -2375,7 +2367,7 @@
             <element signature="method#showNotification#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onAudioFocusChange#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="class#MusicBinder#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#27592#27601#0" expanded="false" />
+            <element signature="e#29270#29279#0" expanded="false" />
             <element signature="method#onUnbind#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="method#loadAlbumArt#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
@@ -2440,7 +2432,7 @@
             <element signature="method#getArtistName#0;class#MainActivity#0" expanded="false" />
             <element signature="method#getMediaTitle#0;class#MainActivity#0" expanded="false" />
             <element signature="method#getAlbumArt#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#16132:16830" expanded="false" />
+            <element signature="class#17347:18045" expanded="false" />
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
             <element signature="method#finish#0;class#MainActivity#0" expanded="false" />
@@ -2453,7 +2445,7 @@
             <element signature="method#showNotification#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onAudioFocusChange#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="class#MusicBinder#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#27592#27601#0" expanded="false" />
+            <element signature="e#29270#29279#0" expanded="false" />
             <element signature="method#onUnbind#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="method#loadAlbumArt#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
@@ -2512,7 +2504,7 @@
             <element signature="method#getArtistName#0;class#MainActivity#0" expanded="false" />
             <element signature="method#getMediaTitle#0;class#MainActivity#0" expanded="false" />
             <element signature="method#getAlbumArt#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#16132:16830" expanded="false" />
+            <element signature="class#17347:18045" expanded="false" />
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
             <element signature="method#finish#0;class#MainActivity#0" expanded="false" />
@@ -2525,7 +2517,7 @@
             <element signature="method#showNotification#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onAudioFocusChange#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="class#MusicBinder#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#27592#27601#0" expanded="false" />
+            <element signature="e#29270#29279#0" expanded="false" />
             <element signature="method#onUnbind#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="method#loadAlbumArt#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
@@ -2565,7 +2557,7 @@
             <element signature="method#getArtistName#0;class#MainActivity#0" expanded="false" />
             <element signature="method#getMediaTitle#0;class#MainActivity#0" expanded="false" />
             <element signature="method#getAlbumArt#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#16132:16830" expanded="false" />
+            <element signature="class#17347:18045" expanded="false" />
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
             <element signature="method#finish#0;class#MainActivity#0" expanded="false" />
@@ -2578,7 +2570,7 @@
             <element signature="method#showNotification#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onAudioFocusChange#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="class#MusicBinder#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#27592#27601#0" expanded="false" />
+            <element signature="e#29270#29279#0" expanded="false" />
             <element signature="method#onUnbind#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="method#loadAlbumArt#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
@@ -2618,7 +2610,7 @@
             <element signature="method#getArtistName#0;class#MainActivity#0" expanded="false" />
             <element signature="method#getMediaTitle#0;class#MainActivity#0" expanded="false" />
             <element signature="method#getAlbumArt#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#16132:16830" expanded="false" />
+            <element signature="class#17347:18045" expanded="false" />
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
             <element signature="method#finish#0;class#MainActivity#0" expanded="false" />
@@ -2631,7 +2623,7 @@
             <element signature="method#showNotification#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onAudioFocusChange#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="class#MusicBinder#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#27592#27601#0" expanded="false" />
+            <element signature="e#29270#29279#0" expanded="false" />
             <element signature="method#onUnbind#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="method#loadAlbumArt#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
@@ -2900,28 +2892,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/net/net16/suvankar/oasis_v12/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36021507">
-          <caret line="963" column="0" selection-start-line="963" selection-start-column="0" selection-end-line="963" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.6362007">
+          <caret line="484" column="12" selection-start-line="484" selection-start-column="12" selection-end-line="484" selection-end-column="12" />
           <folding>
             <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#initializeVariables#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addOnclickListeners#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#10151#10152#0" expanded="true" />
-            <element signature="e#10182#10183#0" expanded="true" />
-            <element signature="e#10226#10227#0" expanded="true" />
-            <element signature="e#10259#10260#0" expanded="true" />
             <element signature="method#showNotification#0;class#MainActivity#0" expanded="false" />
             <element signature="class#MusicBroadcastReceiver#0;class#MainActivity#0" expanded="false" />
             <element signature="method#getArtistName#0;class#MainActivity#0" expanded="false" />
             <element signature="method#getMediaTitle#0;class#MainActivity#0" expanded="false" />
             <element signature="method#getAlbumArt#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#16132:16830" expanded="false" />
+            <element signature="class#17347:18045" expanded="false" />
+            <element signature="e#17996#17997#0" expanded="true" />
+            <element signature="e#18038#18039#0" expanded="true" />
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
             <element signature="method#finish#0;class#MainActivity#0" expanded="false" />
             <element signature="method#getPermissionFromUser#0;class#MainActivity#0" expanded="false" />
             <element signature="method#showExplanation#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreate#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="method#initMusicPlayer#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onProgressChanged#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
@@ -2929,7 +2920,7 @@
             <element signature="method#showNotification#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onAudioFocusChange#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="class#MusicBinder#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#27592#27601#0" expanded="false" />
+            <element signature="e#29270#29279#0" expanded="false" />
             <element signature="method#onUnbind#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="method#loadAlbumArt#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
@@ -2939,18 +2930,17 @@
             <element signature="docComment;method#playSong#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="method#playSong#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="method#playSong#1;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#playSong#2;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="method#pauseSong#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="method#playNextSong#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="method#playPrevSong#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCompletion#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onPrepared#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#35576#36427#0" expanded="true" />
-            <element signature="e#36426#36427#0" expanded="true" />
+            <element signature="e#37272#38123#0" expanded="true" />
+            <element signature="e#38122#38123#0" expanded="true" />
             <element signature="method#showNotification#0;class#SongListFragment#0;class#MainActivity#0" expanded="false" />
             <element signature="method#initializeTabs#0;class#SongListFragment#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#39136#39883#0" expanded="true" />
-            <element signature="e#39882#39883#0" expanded="true" />
+            <element signature="e#40832#41579#0" expanded="true" />
+            <element signature="e#41578#41579#0" expanded="true" />
           </folding>
         </state>
       </provider>

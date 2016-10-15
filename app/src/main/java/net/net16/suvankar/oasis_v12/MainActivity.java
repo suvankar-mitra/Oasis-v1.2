@@ -11,6 +11,7 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.ServiceConnection;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
@@ -103,6 +104,9 @@ public class MainActivity extends AppCompatActivity {
     // It is very important to properly adjust this variable for
     // play pause next previous options.
 
+    //headset receiver
+    private HeadsetIntentReceiver headsetIntentReceiver;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -164,6 +168,7 @@ public class MainActivity extends AppCompatActivity {
 
         defaultAlbumArtBitmap = BitmapFactory.decodeResource(getBaseContext().getResources(), R.drawable.album_art);
 
+        headsetIntentReceiver = new HeadsetIntentReceiver();
     }
 
     private void addOnclickListeners() {
@@ -303,6 +308,9 @@ public class MainActivity extends AppCompatActivity {
         manager.notify(NOTOFICATION_ID, notification);
     }
 
+    /**
+     * A broadcast receiver to receive notification broadcasts
+     */
     public static class MusicBroadcastReceiver extends BroadcastReceiver {
 
         public MusicBroadcastReceiver() {
@@ -353,6 +361,30 @@ public class MainActivity extends AppCompatActivity {
             notification = builder.build();
             notification.contentView = notifView;
             manager.notify(NOTOFICATION_ID, notification);
+        }
+    }
+
+    /**
+     *  Headset connect disconnect receiver
+     */
+    private class HeadsetIntentReceiver extends BroadcastReceiver {
+        @Override public void onReceive(Context context, Intent intent) {
+            if (intent.getAction().equals(Intent.ACTION_HEADSET_PLUG)) {
+                int state = intent.getIntExtra("state", -1);
+                switch (state) {
+                    case 0:
+                        Log.d("Headset", "Headset is unplugged");
+                        musicSrv.pauseSong();
+                        _play.setImageResource(R.drawable.ic_play_arrow_black_24dp);
+                        notifView.setImageViewResource(R.id.noti_playButton, R.drawable.ic_play_arrow_black_24dp);
+                        _isPlaying = false;
+
+                        break;
+                    case 1:
+                        Log.d("Headset", "Headset is plugged");
+                        break;
+                }
+            }
         }
     }
 
@@ -436,6 +468,23 @@ public class MainActivity extends AppCompatActivity {
             startService(playIntent);
             bindService(playIntent, musicConnection, Context.BIND_AUTO_CREATE);
         }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        //registering HeadsetBroadcastReceiver
+        IntentFilter filter = new IntentFilter(Intent.ACTION_HEADSET_PLUG);
+        registerReceiver(headsetIntentReceiver, filter);
+        super.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        //unregistering HeadsetBroadcastReceiver
+        unregisterReceiver(headsetIntentReceiver);
+        super.onPause();
     }
 
     @Override
@@ -830,6 +879,7 @@ public class MainActivity extends AppCompatActivity {
         public void playSong(File music, int position) {
             //_play a song
             currentPlayerPosition = position;
+            onPause = false;
             playSong(music);
         }
 
@@ -921,7 +971,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     /**
-     * A simple {@link Fragment} subclass.
+     * Song list fragment class
      */
     public static class SongListFragment extends Fragment {
 
