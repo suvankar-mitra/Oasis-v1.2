@@ -16,31 +16,38 @@ import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.media.AudioManager;
 import android.media.MediaMetadataRetriever;
 import android.media.MediaPlayer;
 import android.net.Uri;
-import android.os.AsyncTask;
 import android.os.Binder;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.webkit.MimeTypeMap;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.RemoteViews;
 import android.widget.SeekBar;
+import android.widget.TabHost;
+import android.widget.TabWidget;
 import android.widget.TextView;
 
 import net.net16.suvankar.oasis_v12.utils.MusicLibraryController;
@@ -209,12 +216,12 @@ public class MainActivity extends AppCompatActivity {
                 view.startAnimation(queueButtonAnimation);
                 FragmentManager fm = getSupportFragmentManager();
                 FragmentTransaction tx = fm.beginTransaction();
-                tx.setCustomAnimations(R.anim.frag_enter_from_right,R.anim.frag_exit_to_left,
-                        R.anim.frag_enter_from_left,R.anim.frag_exit_to_right);
+                tx.setCustomAnimations(R.anim.frag_enter_from_right, R.anim.frag_exit_to_left,
+                        R.anim.frag_enter_from_left, R.anim.frag_exit_to_right);
 
                 //addToBackStack is very important here
                 //tx.add(R.id.mainActivity, new SongListFragment()).addToBackStack("main fragment").commit();
-                tx.add(android.R.id.content,new SongListFragment()).addToBackStack("main").commit();
+                tx.add(android.R.id.content, new SongListFragment()).addToBackStack("main").commit();
             }
         });
 
@@ -223,9 +230,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 FragmentManager fm = getSupportFragmentManager();
                 FragmentTransaction tx = fm.beginTransaction();
-                tx.setCustomAnimations(R.anim.frag_enter_from_left,R.anim.frag_exit_to_right,
-                        R.anim.frag_enter_from_right,R.anim.frag_exit_to_left);
-                tx.add(android.R.id.content,new NavigationDrawerFragment()).addToBackStack("main").commit();
+                tx.setCustomAnimations(R.anim.frag_enter_from_left, R.anim.frag_exit_to_right,
+                        R.anim.frag_enter_from_right, R.anim.frag_exit_to_left);
+                tx.add(android.R.id.content, new NavigationDrawerFragment()).addToBackStack("main").commit();
             }
         });
 
@@ -236,18 +243,26 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
                 File fileToShare = musicSrv.nowPlaying;
-                if(fileToShare==null) {
+                if (fileToShare == null) {
                     return;
                 }
                 ContentResolver cr = getContentResolver();
                 Uri uri = Uri.fromFile(fileToShare);
                 sharingIntent.setType("audio/mpeg");
-                sharingIntent.putExtra(Intent.EXTRA_SUBJECT,fileToShare.getName());
-                sharingIntent.putExtra(Intent.EXTRA_STREAM,uri);
+                sharingIntent.putExtra(Intent.EXTRA_SUBJECT, fileToShare.getName());
+                sharingIntent.putExtra(Intent.EXTRA_STREAM, uri);
                 startActivity(Intent.createChooser(sharingIntent, "Share via"));
             }
         });
 
+    }
+
+    public static MediaPlayerService getMusicSrv() {
+        return musicSrv;
+    }
+
+    public static boolean is_isPlaying() {
+        return _isPlaying;
     }
 
     //notification config
@@ -263,7 +278,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * @param nowPlaying
      */
-    private void showNotification(final File nowPlaying) {
+    public void showNotification(final File nowPlaying) {
         notifView.setImageViewBitmap(R.id.noti_albumart, getAlbumArt(nowPlaying));
         notifView.setTextViewText(R.id.noti_title, getMediaTitle(nowPlaying));
         notifView.setTextViewText(R.id.noti_artist, getArtistName(nowPlaying));
@@ -305,7 +320,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (ac.equalsIgnoreCase(NEXT)) {
                 code = 2;
             }
-            Log.d("BROARCAST", "code= " + code + " playing="+ _isPlaying);
+            Log.d("BROARCAST", "code= " + code + " playing=" + _isPlaying);
             switch (code) {
                 case 1:
                     if (_isPlaying) {
@@ -445,8 +460,9 @@ public class MainActivity extends AppCompatActivity {
         MusicLibraryController.setIndex(savedInstanceState.getInt("currPos"));
     }
 
-    /**This method override is very important otherwise
-     *on back pressed the activity will be destroyed
+    /**
+     * This method override is very important otherwise
+     * on back pressed the activity will be destroyed
      */
     @Override
     public void finish() {
@@ -559,8 +575,8 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void run() {
                     try {
-                        while (_applicationRunning && player!=null) {
-                            if ( player.isPlaying() && _isPlaying) {
+                        while (_applicationRunning && player != null) {
+                            if (player.isPlaying() && _isPlaying) {
                                 //updating the current time
                                 _currentPos = player.getCurrentPosition();
                                 //updating seekbar
@@ -581,14 +597,14 @@ public class MainActivity extends AppCompatActivity {
                 }
             };
 
-            if(timer != null) {
+            if (timer != null) {
                 timer.cancel();
                 timer.purge();
                 timer = null;
             }
 
             timer = new Timer(true);
-            timer.scheduleAtFixedRate(timerTask,0,100);
+            timer.scheduleAtFixedRate(timerTask, 0, 100);
 
             //create player
             player = new MediaPlayer();
@@ -697,8 +713,8 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public boolean onUnbind(Intent intent) {
-            Log.d("LOG","service unbind called");
-            if(timer != null) {
+            Log.d("LOG", "service unbind called");
+            if (timer != null) {
                 timer.cancel();
                 timer.purge();
             }
@@ -715,7 +731,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onDestroy() {
-            Log.d("LOG","service on destroy called");
+            Log.d("LOG", "service on destroy called");
             super.onDestroy();
         }
 
@@ -811,6 +827,12 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
+        public void playSong(File music, int position) {
+            //_play a song
+            currentPlayerPosition = position;
+            playSong(music);
+        }
+
         public void pauseSong() {
             if (player.isPlaying()) {
                 currentPlayerPosition = player.getCurrentPosition();
@@ -893,6 +915,135 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
             });*/
+        }
+
+    }
+
+
+    /**
+     * A simple {@link Fragment} subclass.
+     */
+    public static class SongListFragment extends Fragment {
+
+
+        public SongListFragment() {
+            // Required empty public constructor
+        }
+
+        private ArrayAdapter<String> arrayAdapter;
+        ListView listView;
+        ArrayList<String> songs;
+
+        @Override
+        public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                                 Bundle savedInstanceState) {
+            // Inflate the layout for this fragment
+            View v = inflater.inflate(R.layout.fragment_song_list, container, false);
+
+            initializeTabs(v);
+
+            songs = new ArrayList<>();
+
+            for (String s : MusicLibraryController.getMusicLibrary()) {
+                songs.add(s.substring(s.lastIndexOf("/") + 1));
+            }
+
+            listView = (ListView) v.findViewById(R.id.listView);
+
+            arrayAdapter = new ArrayAdapter<String>(getContext(), R.layout.song_list_item, songs);
+
+            listView.setAdapter(arrayAdapter);
+            arrayAdapter.notifyDataSetChanged();
+
+            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                    getFragmentManager().beginTransaction().setCustomAnimations(R.anim.frag_enter_from_right,R.anim.frag_exit_to_left,
+                            R.anim.frag_enter_from_left,R.anim.frag_exit_to_right).remove(SongListFragment.this).commit();
+                    getFragmentManager().popBackStack();
+
+                    MainActivity.MediaPlayerService musicSrv = MainActivity.getMusicSrv();
+                    musicSrv.playSong(MusicLibraryController.getFile(i), 0);
+                    _play.setImageResource(R.drawable.ic_pause_black_24dp);
+                    _isPlaying = true;
+                    showNotification(musicSrv.nowPlaying);
+                }
+            });
+
+            return v;
+        }
+
+        private void showNotification(final File nowPlaying) {
+            notifView.setImageViewBitmap(R.id.noti_albumart, getAlbumArt(nowPlaying));
+            notifView.setTextViewText(R.id.noti_title, getMediaTitle(nowPlaying));
+            notifView.setTextViewText(R.id.noti_artist, getArtistName(nowPlaying));
+
+            Intent playPauseIntent = new Intent(getContext(), MusicBroadcastReceiver.class);
+            playPauseIntent.setAction(PLAY);
+            PendingIntent pendingIntent = PendingIntent.getBroadcast(getContext(), 0, playPauseIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+            notifView.setOnClickPendingIntent(R.id.noti_playButton, pendingIntent);
+
+            Intent nextIntent = new Intent(getContext(), MusicBroadcastReceiver.class);
+            nextIntent.setAction(NEXT);
+            PendingIntent pendingIntent1 = PendingIntent.getBroadcast(getContext(), 0, nextIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+            notifView.setOnClickPendingIntent(R.id.noti_nextButton, pendingIntent1);
+
+            if (_isPlaying) {
+                notifView.setImageViewResource(R.id.noti_playButton, R.drawable.ic_pause_black_24dp);
+            } else {
+                notifView.setImageViewResource(R.id.noti_playButton, R.drawable.ic_play_arrow_black_24dp);
+            }
+            notification = builder.build();
+            notification.contentView = notifView;
+            manager.notify(NOTOFICATION_ID, notification);
+        }
+
+        private void initializeTabs(View v) {
+            final TabHost host = (TabHost) v.findViewById(R.id.tabHost);
+            host.setup();
+
+            final TabWidget tabWidget = host.getTabWidget();
+
+            //Tab 1
+            TabHost.TabSpec spec = host.newTabSpec("All songs");
+            spec.setContent(R.id.tab1);
+            spec.setIndicator("All songs");
+            host.addTab(spec);
+
+            //Tab 2
+            spec = host.newTabSpec("Tab Two");
+            spec.setContent(R.id.tab2);
+            spec.setIndicator("Tab Two");
+            host.addTab(spec);
+
+            //Tab 3
+            spec = host.newTabSpec("Tab Three");
+            spec.setContent(R.id.tab3);
+            spec.setIndicator("Tab Three");
+            host.addTab(spec);
+
+            for (int i = 0; i < host.getTabWidget().getChildCount(); i++) {
+                TextView textView = (TextView) tabWidget.getChildAt(i).findViewById(android.R.id.title);
+                if (i != 0)
+                    textView.setTextColor(Color.parseColor("#a5a4a4"));
+                else
+                    textView.setTextColor(Color.parseColor("#FFFFFF"));
+            }
+
+            host.setOnTabChangedListener(new TabHost.OnTabChangeListener() {
+                @Override
+                public void onTabChanged(String s) {
+                    int idx = host.getCurrentTab();
+                    Log.d("TAB", "tab clicked = " + idx);
+                    TextView textView = (TextView) tabWidget.getChildAt(idx).findViewById(android.R.id.title);
+                    textView.setTextColor(Color.WHITE);
+                    for (int i = 0; i < tabWidget.getChildCount(); i++) {
+                        if (i == idx) continue;
+                        textView = (TextView) tabWidget.getChildAt(i).findViewById(android.R.id.title);
+                        textView.setTextColor(Color.parseColor("#a5a4a4"));
+                    }
+                }
+            });
         }
 
     }

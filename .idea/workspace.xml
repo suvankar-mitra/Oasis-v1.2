@@ -3,6 +3,7 @@
   <component name="AndroidLayouts">
     <shared>
       <config>
+        <pickBest>false</pickBest>
         <target>android-23</target>
       </config>
     </shared>
@@ -29,70 +30,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f4dc2926-af11-496b-b0cd-92727eeaef3b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-nodpi/example_appwidget_preview.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/album_art.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/confectionary.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/cork_wallet.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/dark_wood.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/image.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/symphony.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/use_your_illusion.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build.gradle" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/proguard-rules.pro" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/androidTest/java/net/net16/suvankar/oasis_v12/ApplicationTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/net/net16/suvankar/oasis_v12/MainActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/net/net16/suvankar/oasis_v12/NavigationDrawerFragment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/net/net16/suvankar/oasis_v12/SongListFragment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/net/net16/suvankar/oasis_v12/utils/MusicLibraryController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/anim/frag_enter_from_left.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/anim/frag_enter_from_right.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/anim/frag_exit_to_left.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/anim/frag_exit_to_right.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/anim/music_queue_anim_scale.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/anim/play_button_anim_scale.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/anim/skip_button_anim_scale.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/album_art_background.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/app_background.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/circular_next_button_background.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/circular_play_button_background.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_album_black_24dp.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_close_24dp.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_favorite_black_24dp.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_favorite_border_black_24dp.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_menu_black_24dp.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_more_vert_black_24dp.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_pause_black_24dp.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_pause_circle_filled_black_24dp.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_play_arrow_black_24dp.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_play_circle_filled_black_24dp.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_queue_music_black_24dp.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_repeat_black_24dp.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_repeat_one_black_24dp.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_share_black_24dp.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_shuffle_black_24dp.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_skip_next_black_24dp.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_skip_previous_black_24dp.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/linear_gradient_background.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/seekbar_progress_drawable.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/custom_notification_view.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_navigation_drawer.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_song_list.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/values-v14/dimens.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/values-w820dp/dimens.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/test/java/net/net16/suvankar/oasis_v12/ExampleUnitTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/song_list_item.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/net/net16/suvankar/oasis_v12/SongListFragment.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/net/net16/suvankar/oasis_v12/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/net/net16/suvankar/oasis_v12/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/net/net16/suvankar/oasis_v12/utils/MusicLibraryController.java" afterPath="$PROJECT_DIR$/app/src/main/java/net/net16/suvankar/oasis_v12/utils/MusicLibraryController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_song_list.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_song_list.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
     </list>
     <ignored path="Oasis-v1.2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -125,34 +79,75 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/net/net16/suvankar/oasis_v12/MainActivity.java">
+      <file leaf-file-name="fragment_song_list.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_song_list.xml">
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.3454545">
+              <caret line="38" column="20" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MusicLibraryController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/net/net16/suvankar/oasis_v12/utils/MusicLibraryController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="539" column="32" selection-start-line="539" selection-start-column="32" selection-end-line="539" selection-end-column="32" />
+              <caret line="153" column="23" selection-start-line="153" selection-start-column="23" selection-end-line="153" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="song_list_item.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/song_list_item.xml">
+          <provider selected="true" editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.6153846">
+              <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/net/net16/suvankar/oasis_v12/MainActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.36021507">
+              <caret line="963" column="0" selection-start-line="963" selection-start-column="0" selection-end-line="963" selection-end-column="0" />
               <folding>
                 <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#initializeVariables#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#addOnclickListeners#0;class#MainActivity#0" expanded="false" />
+                <element signature="e#10151#10152#0" expanded="true" />
+                <element signature="e#10182#10183#0" expanded="true" />
+                <element signature="e#10226#10227#0" expanded="true" />
+                <element signature="e#10259#10260#0" expanded="true" />
                 <element signature="method#showNotification#0;class#MainActivity#0" expanded="false" />
                 <element signature="class#MusicBroadcastReceiver#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#getArtistName#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#getMediaTitle#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#getAlbumArt#0;class#MainActivity#0" expanded="false" />
-                <element signature="class#15718:16416" expanded="false" />
+                <element signature="class#16132:16830" expanded="false" />
                 <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#finish#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#getPermissionFromUser#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#showExplanation#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#onCreate#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#initMusicPlayer#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#onProgressChanged#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#onStopTrackingTouch#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#showNotification#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#onAudioFocusChange#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
                 <element signature="class#MusicBinder#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
-                <element signature="e#27165#27174#0" expanded="false" />
+                <element signature="e#27592#27601#0" expanded="false" />
                 <element signature="method#onUnbind#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#onDestroy#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#loadAlbumArt#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
@@ -162,25 +157,29 @@
                 <element signature="docComment;method#playSong#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#playSong#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#playSong#1;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#playSong#2;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#pauseSong#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#playNextSong#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#playPrevSong#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#onCompletion#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#onPrepared#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
+                <element signature="e#35576#36427#0" expanded="true" />
+                <element signature="e#36426#36427#0" expanded="true" />
+                <element signature="method#showNotification#0;class#SongListFragment#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#initializeTabs#0;class#SongListFragment#0;class#MainActivity#0" expanded="false" />
+                <element signature="e#39136#39883#0" expanded="true" />
+                <element signature="e#39882#39883#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MusicLibraryController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/net/net16/suvankar/oasis_v12/utils/MusicLibraryController.java">
+      <file leaf-file-name="NavigationDrawerFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/net/net16/suvankar/oasis_v12/NavigationDrawerFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4516129">
-              <caret line="165" column="15" selection-start-line="165" selection-start-column="15" selection-end-line="165" selection-end-column="15" />
-              <folding>
-                <element signature="e#4258#4259#0" expanded="true" />
-                <element signature="e#4288#4289#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0">
+              <caret line="39" column="52" selection-start-line="37" selection-start-column="16" selection-end-line="39" selection-end-column="52" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -1810,10 +1809,13 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_navigation_drawer.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/net/net16/suvankar/oasis_v12/NavigationDrawerFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_song_list.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/net/net16/suvankar/oasis_v12/SongListFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/app_background.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_tab1.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_tab2.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_song_list.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/net/net16/suvankar/oasis_v12/utils/MusicLibraryController.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/song_list_item.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/net/net16/suvankar/oasis_v12/SongListFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/net/net16/suvankar/oasis_v12/MainActivity.java" />
       </list>
     </option>
@@ -1849,10 +1851,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -1869,6 +1867,28 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Oasis-v1.2" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -1925,15 +1945,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Oasis-v1.2" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/sdk" />
-    <property name="device.picker.selection" value="FAAZCY281808" />
+    <property name="device.picker.selection" value="ZX1B335Q7D" />
     <property name="NetworkMonitor.minimized" value="true" />
     <property name="GpuMonitor.minimized" value="true" />
     <property name="UI_DESIGNER_EDITOR_MODE.CaptureAnalysis.SHOW" value="false" />
@@ -1941,8 +1975,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\suvankarmitra\AndroidStudioProjects\Oasis-v1.2\app\src\main\res\drawable" />
       <recent name="C:\Users\suvankarmitra\AndroidStudioProjects\Oasis-v1.2\app\src\main\res\layout" />
+      <recent name="C:\Users\suvankarmitra\AndroidStudioProjects\Oasis-v1.2\app\src\main\res\drawable" />
       <recent name="C:\Users\suvankarmitra\AndroidStudioProjects\Oasis-v1.2\app\src\main\res" />
     </key>
   </component>
@@ -2242,6 +2276,7 @@
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2473525" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32764506" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -2253,7 +2288,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3993174" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928944" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -2307,81 +2341,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/net/net16/suvankar/oasis_v12/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="569" column="37" selection-start-line="569" selection-start-column="37" selection-end-line="569" selection-end-column="37" />
-          <folding>
-            <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#initializeVariables#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#addOnclickListeners#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#showNotification#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#MusicBroadcastReceiver#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#getArtistName#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#getMediaTitle#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#getAlbumArt#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#15718:16416" expanded="false" />
-            <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#finish#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#getPermissionFromUser#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#showExplanation#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#initMusicPlayer#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onProgressChanged#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onStopTrackingTouch#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#showNotification#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onAudioFocusChange#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#MusicBinder#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#27165#27174#0" expanded="false" />
-            <element signature="method#onUnbind#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onDestroy#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#loadAlbumArt#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#getAlbumArt#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
-            <element signature="docComment;method#prepareForPlayback#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#prepareForPlayback#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
-            <element signature="docComment;method#playSong#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#playSong#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#playSong#1;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#pauseSong#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#playNextSong#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#playPrevSong#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onCompletion#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onPrepared#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_song_list.xml">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/net/net16/suvankar/oasis_v12/SongListFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="38" column="24" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/app_background.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2403,7 +2362,7 @@
             <element signature="method#getArtistName#0;class#MainActivity#0" expanded="false" />
             <element signature="method#getMediaTitle#0;class#MainActivity#0" expanded="false" />
             <element signature="method#getAlbumArt#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#15718:16416" expanded="false" />
+            <element signature="class#16132:16830" expanded="false" />
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
             <element signature="method#finish#0;class#MainActivity#0" expanded="false" />
@@ -2416,7 +2375,7 @@
             <element signature="method#showNotification#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onAudioFocusChange#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="class#MusicBinder#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#27165#27174#0" expanded="false" />
+            <element signature="e#27592#27601#0" expanded="false" />
             <element signature="method#onUnbind#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="method#loadAlbumArt#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
@@ -2436,36 +2395,36 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_song_list.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
       <provider selected="true" editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="39" column="24" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
           <folding />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/custom_notification_view.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="66" column="8" selection-start-line="66" selection-start-column="8" selection-end-line="66" selection-end-column="8" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/net/net16/suvankar/oasis_v12/MainActivity.java">
@@ -2481,7 +2440,7 @@
             <element signature="method#getArtistName#0;class#MainActivity#0" expanded="false" />
             <element signature="method#getMediaTitle#0;class#MainActivity#0" expanded="false" />
             <element signature="method#getAlbumArt#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#15718:16416" expanded="false" />
+            <element signature="class#16132:16830" expanded="false" />
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
             <element signature="method#finish#0;class#MainActivity#0" expanded="false" />
@@ -2494,7 +2453,7 @@
             <element signature="method#showNotification#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onAudioFocusChange#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="class#MusicBinder#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#27165#27174#0" expanded="false" />
+            <element signature="e#27592#27601#0" expanded="false" />
             <element signature="method#onUnbind#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="method#loadAlbumArt#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
@@ -2522,23 +2481,21 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
           <folding />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/net/net16/suvankar/oasis_v12/utils/MusicLibraryController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2555,7 +2512,7 @@
             <element signature="method#getArtistName#0;class#MainActivity#0" expanded="false" />
             <element signature="method#getMediaTitle#0;class#MainActivity#0" expanded="false" />
             <element signature="method#getAlbumArt#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#15718:16416" expanded="false" />
+            <element signature="class#16132:16830" expanded="false" />
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
             <element signature="method#finish#0;class#MainActivity#0" expanded="false" />
@@ -2568,7 +2525,7 @@
             <element signature="method#showNotification#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onAudioFocusChange#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="class#MusicBinder#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#27165#27174#0" expanded="false" />
+            <element signature="e#27592#27601#0" expanded="false" />
             <element signature="method#onUnbind#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="method#loadAlbumArt#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
@@ -2591,9 +2548,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="96" column="9" selection-start-line="96" selection-start-column="9" selection-end-line="96" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2610,7 +2565,7 @@
             <element signature="method#getArtistName#0;class#MainActivity#0" expanded="false" />
             <element signature="method#getMediaTitle#0;class#MainActivity#0" expanded="false" />
             <element signature="method#getAlbumArt#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#15718:16416" expanded="false" />
+            <element signature="class#16132:16830" expanded="false" />
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
             <element signature="method#finish#0;class#MainActivity#0" expanded="false" />
@@ -2623,7 +2578,7 @@
             <element signature="method#showNotification#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onAudioFocusChange#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="class#MusicBinder#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#27165#27174#0" expanded="false" />
+            <element signature="e#27592#27601#0" expanded="false" />
             <element signature="method#onUnbind#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="method#loadAlbumArt#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
@@ -2646,9 +2601,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="96" column="9" selection-start-line="96" selection-start-column="9" selection-end-line="96" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2665,7 +2618,7 @@
             <element signature="method#getArtistName#0;class#MainActivity#0" expanded="false" />
             <element signature="method#getMediaTitle#0;class#MainActivity#0" expanded="false" />
             <element signature="method#getAlbumArt#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#15718:16416" expanded="false" />
+            <element signature="class#16132:16830" expanded="false" />
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
             <element signature="method#finish#0;class#MainActivity#0" expanded="false" />
@@ -2678,7 +2631,7 @@
             <element signature="method#showNotification#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onAudioFocusChange#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="class#MusicBinder#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#27165#27174#0" expanded="false" />
+            <element signature="e#27592#27601#0" expanded="false" />
             <element signature="method#onUnbind#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="method#loadAlbumArt#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
@@ -2701,9 +2654,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2796,14 +2747,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/custom_notification_view.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="66" column="8" selection-start-line="66" selection-start-column="8" selection-end-line="66" selection-end-column="8" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
@@ -2879,39 +2830,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_navigation_drawer.xml">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.230769">
-          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/net/net16/suvankar/oasis_v12/NavigationDrawerFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="39" column="52" selection-start-line="39" selection-start-column="52" selection-end-line="39" selection-end-column="52" />
-          <folding>
-            <element signature="e#985#1476#0" expanded="true" />
-            <element signature="e#1475#1476#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_song_list.xml">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/app_background.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.3076923">
@@ -2920,52 +2838,98 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_navigation_drawer.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="38" column="24" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/song_list_item.xml">
       <provider selected="true" editor-type-id="android-designer">
         <state />
       </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.6153846">
+          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/net/net16/suvankar/oasis_v12/SongListFragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_song_list.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.3454545">
+          <caret line="38" column="20" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/net/net16/suvankar/oasis_v12/utils/MusicLibraryController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+          <caret line="153" column="23" selection-start-line="153" selection-start-column="23" selection-end-line="153" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/net/net16/suvankar/oasis_v12/NavigationDrawerFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="52" selection-start-line="37" selection-start-column="16" selection-end-line="39" selection-end-column="52" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/net/net16/suvankar/oasis_v12/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="539" column="32" selection-start-line="539" selection-start-column="32" selection-end-line="539" selection-end-column="32" />
+        <state vertical-scroll-proportion="0.36021507">
+          <caret line="963" column="0" selection-start-line="963" selection-start-column="0" selection-end-line="963" selection-end-column="0" />
           <folding>
             <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#initializeVariables#0;class#MainActivity#0" expanded="false" />
             <element signature="method#addOnclickListeners#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#10151#10152#0" expanded="true" />
+            <element signature="e#10182#10183#0" expanded="true" />
+            <element signature="e#10226#10227#0" expanded="true" />
+            <element signature="e#10259#10260#0" expanded="true" />
             <element signature="method#showNotification#0;class#MainActivity#0" expanded="false" />
             <element signature="class#MusicBroadcastReceiver#0;class#MainActivity#0" expanded="false" />
             <element signature="method#getArtistName#0;class#MainActivity#0" expanded="false" />
             <element signature="method#getMediaTitle#0;class#MainActivity#0" expanded="false" />
             <element signature="method#getAlbumArt#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#15718:16416" expanded="false" />
+            <element signature="class#16132:16830" expanded="false" />
             <element signature="method#onStart#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
             <element signature="method#finish#0;class#MainActivity#0" expanded="false" />
             <element signature="method#getPermissionFromUser#0;class#MainActivity#0" expanded="false" />
             <element signature="method#showExplanation#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onCreate#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="method#initMusicPlayer#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onProgressChanged#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onStopTrackingTouch#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="method#showNotification#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onAudioFocusChange#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="class#MusicBinder#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#27165#27174#0" expanded="false" />
+            <element signature="e#27592#27601#0" expanded="false" />
             <element signature="method#onUnbind#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="method#loadAlbumArt#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
@@ -2975,22 +2939,18 @@
             <element signature="docComment;method#playSong#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="method#playSong#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="method#playSong#1;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#playSong#2;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="method#pauseSong#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="method#playNextSong#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="method#playPrevSong#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCompletion#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onPrepared#0;class#MediaPlayerService#0;class#MainActivity#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/net/net16/suvankar/oasis_v12/utils/MusicLibraryController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4516129">
-          <caret line="165" column="15" selection-start-line="165" selection-start-column="15" selection-end-line="165" selection-end-column="15" />
-          <folding>
-            <element signature="e#4258#4259#0" expanded="true" />
-            <element signature="e#4288#4289#0" expanded="true" />
+            <element signature="e#35576#36427#0" expanded="true" />
+            <element signature="e#36426#36427#0" expanded="true" />
+            <element signature="method#showNotification#0;class#SongListFragment#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#initializeTabs#0;class#SongListFragment#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#39136#39883#0" expanded="true" />
+            <element signature="e#39882#39883#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -1,3 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        jar="C:\Users\suvankarmitra\AndroidStudioProjects\Oasis-v1.2\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\jars\libs\internal_impl-24.1.1.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="f78c2f395cb096f9dc1dc07e729922b8fcd3c4f5">
+        <dex dex="C:\Users\suvankarmitra\AndroidStudioProjects\Oasis-v1.2\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.1.1_d1de3f4a310efdb8f868e3153c9a3816219e8dc8\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\suvankarmitra\.gradle\caches\modules-2\files-2.1\org.jetbrains\annotations-java5\15.0\7011b4551a8451906759b05814c58b9eb829ea9b\annotations-java5-15.0.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="7011b4551a8451906759b05814c58b9eb829ea9b">
+        <dex dex="C:\Users\suvankarmitra\AndroidStudioProjects\Oasis-v1.2\app\build\intermediates\transforms\dex\debug\folders\1000\10\annotations-java5-15.0_0e29938a5b03479dbd68c15ad38898d26c8cd34e\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\suvankarmitra\AndroidStudioProjects\Oasis-v1.2\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="6d7d803871e3203465f71a163e7af104f807b446">
+        <dex dex="C:\Users\suvankarmitra\AndroidStudioProjects\Oasis-v1.2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-24.1.1_2ebf6fc64292b0dbd147f0fbc3a85a31e696cf98\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\suvankarmitra\AndroidStudioProjects\Oasis-v1.2\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.1.1\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="f62e763609f65e47dc6c498760a4accf02776788">
+        <dex dex="C:\Users\suvankarmitra\AndroidStudioProjects\Oasis-v1.2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-24.1.1_1ab9911655479b080dda9ceb4b088171357adf13\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\suvankarmitra\.gradle\caches\modules-2\files-2.1\com.android.support\support-annotations\24.1.1\3af19f153122737b372622fa6c81dd11a1c6b999\support-annotations-24.1.1.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="3af19f153122737b372622fa6c81dd11a1c6b999">
+        <dex dex="C:\Users\suvankarmitra\AndroidStudioProjects\Oasis-v1.2\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-24.1.1_8d98e5ba04ebeadd224e335b81214b735c4001e4\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\suvankarmitra\AndroidStudioProjects\Oasis-v1.2\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="9a69656b169e9cb7b51ab3b684a2a9d294254844">
+        <dex dex="C:\Users\suvankarmitra\AndroidStudioProjects\Oasis-v1.2\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_614ddb26109bbd777655254ea2b37a3bc7af02fd\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\suvankarmitra\AndroidStudioProjects\Oasis-v1.2\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="276bd6f964ce277f2d535e7a6a51ff1fe52bdec6">
+        <dex dex="C:\Users\suvankarmitra\AndroidStudioProjects\Oasis-v1.2\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_9806e0a0abf735c16fcd608e8577cedcdccedc3c\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\suvankarmitra\AndroidStudioProjects\Oasis-v1.2\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.1.1\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="1256c10604bb098490eab070d76754ac5ceab35c">
+        <dex dex="C:\Users\suvankarmitra\AndroidStudioProjects\Oasis-v1.2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-24.1.1_0cf1c55ec16cd04d79c034cfd0c34939112eb425\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\suvankarmitra\AndroidStudioProjects\Oasis-v1.2\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.1.1\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="c936c1bd42f0c018c18920c7bec619ef056b24f8">
+        <dex dex="C:\Users\suvankarmitra\AndroidStudioProjects\Oasis-v1.2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-24.1.1_92b9ec4d26b85777cd4a7bf511a253482652dd2a\classes.dex" />
+    </item>
+
+</items>

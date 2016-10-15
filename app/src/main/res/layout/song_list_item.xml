@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/song_list_text_view"
+    android:textColor="#ffffff"
+    android:textStyle="bold"
+    android:text="this is a demo text"
+    android:textSize="16dp"
+    android:padding="5dp"
+    android:background="#8f1e1b1b">
+
+</TextView>

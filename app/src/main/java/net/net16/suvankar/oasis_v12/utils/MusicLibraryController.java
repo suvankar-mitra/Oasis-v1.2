@@ -60,6 +60,8 @@ public class MusicLibraryController {
         }
     }
 
+
+
     public static void setMusicLibrary(final File root) {
         musicLibrary = new ArrayList<>();
         //read music files from storage
