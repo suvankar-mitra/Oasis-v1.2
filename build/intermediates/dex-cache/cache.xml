@@ -1,3 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        jar="C:\Users\suvankarmitra\AndroidStudioProjects\Oasis-v1.2\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="664856454205cc0d1f5867ffc72b6db36862a0d8">
+        <dex dex="C:\Users\suvankarmitra\AndroidStudioProjects\Oasis-v1.2\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_614ddb26109bbd777655254ea2b37a3bc7af02fd\classes.dex" />
+    </item>
+
+</items>

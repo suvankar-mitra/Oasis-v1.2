@@ -32,11 +32,15 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
+import android.support.v4.view.MotionEventCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.GestureDetector;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -82,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
     ImageButton fav;
     ImageButton navDrawer;
     ImageButton share;
+    ImageButton shuffle;
     static SeekBar _seekBar;
     static TextView _curTime;
     static TextView _totTime;
@@ -156,6 +161,7 @@ public class MainActivity extends AppCompatActivity {
         navDrawer = (ImageButton) findViewById(R.id.navDrawerButton);
         fav = (ImageButton) findViewById(R.id.fav);
         share = (ImageButton) findViewById(R.id.share);
+        shuffle = (ImageButton) findViewById(R.id.shuffle);
         _curTime = (TextView) findViewById(R.id.currentTime);
         _totTime = (TextView) findViewById(R.id.totalTime);
         _seekBar = (SeekBar) findViewById(R.id.seekBar);
@@ -344,6 +350,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        shuffle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(!MusicLibraryController.isShuffle()) {
+                    shuffle.setImageResource(R.drawable.ic_shuffle_red_24dp);
+                    MusicLibraryController.setShuffle(true);
+                }
+                else {
+                    shuffle.setImageResource(R.drawable.ic_shuffle_black_24dp);
+                    MusicLibraryController.setShuffle(false);
+                }
+            }
+        });
+
     }
 
     public static MediaPlayerService getMusicSrv() {
@@ -358,6 +378,7 @@ public class MainActivity extends AppCompatActivity {
      * @param nowPlaying
      */
     public void showNotification(final File nowPlaying) {
+        manager.cancel(NOTOFICATION_ID);
         notifView.setImageViewBitmap(R.id.noti_albumart, getAlbumArt(nowPlaying));
         notifView.setTextViewText(R.id.noti_title, getMediaTitle(nowPlaying));
         notifView.setTextViewText(R.id.noti_artist, getArtistName(nowPlaying));
@@ -442,20 +463,25 @@ public class MainActivity extends AppCompatActivity {
      *  Headset connect disconnect receiver
      */
     private class HeadsetIntentReceiver extends BroadcastReceiver {
+        private boolean wasHeadphoneConnected = false;
         @Override public void onReceive(Context context, Intent intent) {
             if (intent.getAction().equals(Intent.ACTION_HEADSET_PLUG)) {
                 int state = intent.getIntExtra("state", -1);
                 switch (state) {
                     case 0:
                         Log.d("Headset", "Headset is unplugged");
-                        musicSrv.pauseSong();
-                        _play.setImageResource(R.drawable.ic_play_arrow_black_24dp);
-                        notifView.setImageViewResource(R.id.noti_playButton, R.drawable.ic_play_arrow_black_24dp);
-                        _isPlaying = false;
+                        if(_isPlaying && wasHeadphoneConnected) {
+                            musicSrv.pauseSong();
+                            _play.setImageResource(R.drawable.ic_play_arrow_black_24dp);
+                            notifView.setImageViewResource(R.id.noti_playButton, R.drawable.ic_play_arrow_black_24dp);
+                            manager.cancel(NOTOFICATION_ID);
+                            _isPlaying = false;
+                        }
 
                         break;
                     case 1:
                         Log.d("Headset", "Headset is plugged");
+                        wasHeadphoneConnected = true;
                         break;
                 }
             }
@@ -467,9 +493,9 @@ public class MainActivity extends AppCompatActivity {
             return null;
         MediaMetadataRetriever mmr = new MediaMetadataRetriever();
         mmr.setDataSource(file.getAbsolutePath());
-        String artist = mmr.extractMetadata(MediaMetadataRetriever.METADATA_KEY_ALBUMARTIST);
+        String artist = mmr.extractMetadata(MediaMetadataRetriever.METADATA_KEY_ARTIST);
         if (artist == null)
-            artist = mmr.extractMetadata(MediaMetadataRetriever.METADATA_KEY_ARTIST);
+            artist = mmr.extractMetadata(MediaMetadataRetriever.METADATA_KEY_ALBUMARTIST);
         mmr.release();
         if (artist == null) {
             artist = "Unknown artist";
@@ -575,12 +601,18 @@ public class MainActivity extends AppCompatActivity {
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putInt("currPos", MusicLibraryController.getIndex());
+        outState.putInt("shuffle", MusicLibraryController.isShuffle()?1:0);
+        Log.d("onsaveins","shuffle="+MusicLibraryController.isShuffle());
     }
 
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
         MusicLibraryController.setIndex(savedInstanceState.getInt("currPos"));
+        MusicLibraryController.setShuffle(savedInstanceState.getInt("shuffle")==1?true:false);
+        if(MusicLibraryController.isShuffle()) {
+            shuffle.setImageResource(R.drawable.ic_shuffle_red_24dp);
+        }
     }
 
     /**
@@ -649,7 +681,8 @@ public class MainActivity extends AppCompatActivity {
      * Music player service class
      */
     public static class MediaPlayerService extends Service implements MediaPlayer.OnPreparedListener,
-            MediaPlayer.OnCompletionListener, MediaPlayer.OnErrorListener, SeekBar.OnSeekBarChangeListener, AudioManager.OnAudioFocusChangeListener {
+            MediaPlayer.OnCompletionListener, MediaPlayer.OnErrorListener,
+            SeekBar.OnSeekBarChangeListener, AudioManager.OnAudioFocusChangeListener {
 
         //media player
         private MediaPlayer player;
@@ -1057,6 +1090,7 @@ public class MainActivity extends AppCompatActivity {
         private ArrayAdapter<String> arrayAdapter;
         ListView listView;
         ArrayList<String> songs;
+        Toolbar toolbar;
 
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -1064,6 +1098,7 @@ public class MainActivity extends AppCompatActivity {
             // Inflate the layout for this fragment
             View v = inflater.inflate(R.layout.fragment_song_list, container, false);
 
+            initToolBar(v);
             initializeTabs(v);
 
             songs = new ArrayList<>();
@@ -1095,6 +1130,22 @@ public class MainActivity extends AppCompatActivity {
             });
 
             return v;
+        }
+
+        private void initToolBar(View v) {
+            toolbar = (Toolbar) v.findViewById(R.id.queueToolBar);
+            ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
+            toolbar.setNavigationIcon(R.drawable.ic_arrow_back_black_24dp);
+            toolbar.setTitle("");
+            toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    getFragmentManager().beginTransaction().setCustomAnimations(R.anim.frag_enter_from_left,R.anim.frag_exit_to_right,
+                            R.anim.frag_enter_from_right,R.anim.frag_exit_to_left).remove(SongListFragment.this).commit();
+                    getFragmentManager().popBackStack();
+                }
+            });
+
         }
 
         private void showNotification(final File nowPlaying) {

@@ -1,15 +1,13 @@
 package net.net16.suvankar.oasis_v12.utils;
 
-import android.media.MediaPlayer;
 import android.os.AsyncTask;
-import android.support.annotation.NonNull;
 import android.util.Log;
 
 import org.jetbrains.annotations.Contract;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Random;
 
 /**
  * Created by suvankarmitra on 9/10/2016.
@@ -23,6 +21,11 @@ public class MusicLibraryController {
     private static int currPos = 0;
     private static int length = 0;
     private static boolean isPrevCalled = false;
+
+    private static boolean shuffle = false;
+    private static int[] indexArray;
+    private static int indexArrayIndex = 0;
+
 
     private MusicLibraryController(){
     }
@@ -60,8 +63,6 @@ public class MusicLibraryController {
         }
     }
 
-
-
     public static void setMusicLibrary(final File root) {
         musicLibrary = new ArrayList<>();
         //read music files from storage
@@ -96,6 +97,9 @@ public class MusicLibraryController {
             length = musicLibrary.size();
             musicLibrary.notify();
             musicReadComplete = true;
+            indexArray = new int[length];
+            for(int i=0; i<length; i++)
+                indexArray[i] = i;
             return musicReadComplete;
         }
     }
@@ -112,6 +116,17 @@ public class MusicLibraryController {
                 currPos++;
                 isPrevCalled = false;
             }*/
+            if(shuffle) {
+                if(indexArrayIndex == indexArray.length-1){
+                    indexArrayIndex = -1;
+                }
+                currPos = indexArray[++indexArrayIndex];
+                Log.d("index","nex index="+currPos+", indexarrayindex="+indexArrayIndex);
+                String filepath = musicLibrary.get(currPos);
+                Log.d("Song",currPos+" - "+filepath);
+                return new File(filepath);
+            }
+
             if (currPos >= length-1) {
                 currPos = 0;
             }
@@ -130,6 +145,15 @@ public class MusicLibraryController {
                     e.printStackTrace();
                 }
             isPrevCalled = true;
+            if(shuffle) {
+                if(indexArrayIndex == 0) {
+                    indexArrayIndex = indexArray.length;
+                }
+                currPos = indexArray[--indexArrayIndex];
+                String filepath = musicLibrary.get(currPos);
+                Log.d("Song",currPos+" - "+filepath);
+                return new File(filepath);
+            }
             if (currPos == 0) {
                 prev = musicLibrary.get(length - 1);
                 currPos = length - 1;
@@ -175,5 +199,30 @@ public class MusicLibraryController {
                 }
             return new File(musicLibrary.get(currPos));
         }
+    }
+
+    public static void setShuffle(boolean shuffle) {
+        MusicLibraryController.shuffle = shuffle;
+        indexArray = shuffleArray(indexArray);
+        indexArrayIndex = 0;
+        currPos = indexArray[indexArrayIndex];
+    }
+
+    public static boolean isShuffle() {
+        return shuffle;
+    }
+
+    /**
+     * Fisher–Yates shuffle
+     */
+    static int[] shuffleArray(int[] array) {
+        Random rnd = new Random();
+        for (int i = array.length - 1; i > 0; i--) {
+            int index = rnd.nextInt(i + 1);
+            int temp = array[index];
+            array[index] = array[i];
+            array[i] = temp;
+        }
+        return array;
     }
 }

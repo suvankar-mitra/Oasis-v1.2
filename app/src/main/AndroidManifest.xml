@@ -20,8 +20,8 @@
             </intent-filter>
         </activity>
         <service android:name=".MainActivity$MediaPlayerService"></service>
-        <receiver android:name=".MainActivity$MusicBroadcastReceiver">
-            
+        <receiver android:name=".MainActivity$MusicBroadcastReceiver"
+            android:exported="true">
         </receiver>
     </application>
 
